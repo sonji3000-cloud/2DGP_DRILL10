@@ -53,7 +53,9 @@ class Ball:
         if self.y < 600:
             self.y += self.speed
         else:
+            self.speed = 3
             self.y -= self.speed
+            delay(0.05)
     def draw(self):
         self.image.draw(self.x, self.y)
         

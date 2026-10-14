@@ -53,8 +53,10 @@ class Ball:
         if self.y < 600:
             self.y += self.speed
         else:
-            self.speed = 3
-            self.y -= self.speed
+            for i in range(20):
+                self.speed = 1
+                self.y -= self.speed
+            self.speed = 2
     def draw(self):
         self.image.draw(self.x, self.y)
         

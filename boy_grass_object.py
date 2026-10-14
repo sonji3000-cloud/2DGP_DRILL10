@@ -29,7 +29,7 @@ class Zombie:
         self.image.clip_draw(self.frame * frame_width, 0, frame_width, frame_height, self.x, self.y, frame_width // 2, frame_height // 2)
 class Boy:
     def __init__(self):
-        self.x, self.y = random.randint(100, 700), 90
+        self.x, self.y = random.randint(50, 750), 90
         self.image = load_image('run_animation.png')
         self.frame = random.randint(0, 7)
 
@@ -42,7 +42,7 @@ class Boy:
 
 class Ball:
     def __init__(self):
-        self.x, self.y = random.randint(100, 700), 20
+        self.x, self.y = random.randint(100, 700), 30
         self.size = random.randint(0,1)
         if self.size == 0:
             self.image = load_image('ball21x21.png')
@@ -58,7 +58,6 @@ class Ball:
     def draw(self):
         self.image.draw(self.x, self.y)
         
-
 
 def reset_world():
     global running
